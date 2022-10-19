@@ -70,6 +70,7 @@ box-shadow: 0.5rem 2px 0.5rem rgba(0,0,0,1) ;
 .image{
     width: 600px;
     height: 400px;
+    background-image: url('best-nature-image.jpg');
 }
 
 .answer{
