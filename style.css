@@ -5,6 +5,9 @@
     box-sizing: inherit;   
 
 }
+body{
+    overflow: hidden;
+}
 html{
     font-size: 10px;
    
@@ -17,6 +20,7 @@ h1{
 .accordionls{
     width: 400px;
     
+    
  
 }
 .Container{
@@ -24,6 +28,7 @@ h1{
    padding: 0;
     width: 100vw;
     height: 80vh;
+    
 }
 
 .moaccordion{
@@ -34,9 +39,21 @@ justify-content: space-evenly;
 margin: 10px;
 padding: 0;
 
+
 }
 
-
+.master{
+    position: relative;
+}
+.master .cancel{
+    font-size: 20px;
+    color: #eee;
+    position: fixed;
+    
+        
+ 
+    
+}
 .accordionrs{
 
     background-color: #283042;
@@ -46,6 +63,7 @@ padding: 30px;
 /* -webkit-box-shadow:0 3px 10px -2px rgba(0,0,0,2) ;
 box-shadow: 0 3 10 -2 rgba(0,0,0,2); */
 box-shadow: 0.5rem 2px 0.5rem rgba(0,0,0,1) ;
+
 }
 
 .accordion-link{
@@ -82,30 +100,33 @@ box-shadow: 0.5rem 2px 0.5rem rgba(0,0,0,1) ;
    transition: all 650ms;
 }
 
-
-.answer::before{
- 
-    position: absolute;
-    background-color: #8fc460;
-    top :50%;
-    left: 0;
-    transform: translateY(-50%);
-        
-}
-
 .answer p{
     color: rgba(255,255,255,6);
     font-size:  1.4rem; 
     padding: 2rem;
 }
-.accordionrs:target .answer{
-    max-height: 10rem;
+:target .answer{
+    max-height: 20rem;
+    
 }
 
-.accordionrs:target .accordion-link .fa-solid.fa-plus{
+.accordionrs:target .fa-solid.fa-plus{
     display: none;
+   
 }
 
-.accordionrs:target .accordion-link .fa-solid.fa-minus{
+
+.fa-solid.fa-minus.cancel{
     display: block;
+}
+.fa-solid.fa-minus.icancel{
+    width: 30%;
+    position: absolute;
+    left: 330px;
+    top: 20px;
+ 
+    
+}
+.master:target .answer {
+    height: 0rem;
 }
